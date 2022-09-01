@@ -1,0 +1,69 @@
+<html>
+	<head>
+
+		{% load static %}
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="{% static 'AppCoder/css/style.css' %}">
+		<link href='https://fonts.googleapis.com/css?family=Merienda' rel='stylesheet'>
+		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+    	<title>Proyecto Final</title>
+    	<link rel="icon" href="{% static 'AppCoder/images/logo.png' %}">
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	  	<div id="Welcome">
+	  		<!---Start navigation Bar -->
+	    	<nav class="navbar navbar-expand-lg navbar fixed-top  navbar-light bg-light">
+		 		<a class="navbar-brand" href="#Welcome">
+    				<img src="{% static 'AppCoder/images/logo.png' %}" width="50" height="50" class="d-inline-block" alt=""> CoderHouse Restaurant
+		 		</a>
+		 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    		<span class="navbar-toggler-icon"></span>
+		 		</button>
+			  	<div class="collapse navbar-collapse" id="navbarText">
+			    	<ul class="navbar-nav ml-auto">
+			      		<li class="nav-item">
+			        		<a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+			      		</li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="{% url 'productos' %}">Productos</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="{% url 'locales' %}">Locales</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="{% url 'chefs' %}">Chefs</a>
+					    </li>
+					    <li class="nav-item">
+					    	<a class="nav-link" href="{% url 'reservas' %}">Reservas</a>
+					    </li>										    
+				    </ul>
+				</div>
+			</nav>
+			<!--- End Navigation Bar -->
+			<!--- Start Carousel -->			
+			{% block titulo_de_pagina %}
+
+       		{% endblock %}
+		</div>
+			<!--- End of Carousel -->			
+		
+		{% block cambios_en_pagina %}
+
+		{% endblock %}
+
+
+		<script src="{% static 'AppCoder/js/jquery-3.3.1.min.js' %}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script type="text/javascript" src="{% static 'AppCoder/js/map.js' %}"></script>
+		<script type="text/javascript" src="{% static 'AppCoder/js/smooth-scroll.js' %}"></script>
+		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+		<script type="text/javascript" src="{% static 'AppCoder/js/image-effect.js' %}"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFZjOV0KA68G2YAh-rn7I3qKqCQEh_Ja0&callback=myMap">
+	    </script>
+  	</body>
+</html>

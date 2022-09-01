@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <img class="d-block w-100 img-fluid img-slider" src="{% static 'AppCoder/images/reserve.jpg' %}" alt="First slide">
+	<div class="reserve-text col-lg-12 ">
+        <h1 class="text-center">Reservas</h1>
+    </div> 
+
+{% endblock %}
+
+{% block cambios_en_pagina %}
+
+<h2>Formulario Reservas</h2>
+
+<form action="{% url 'reservaFormulario' %}" method="POST"> {% csrf_token %}
+
+<table>
+    
+    {{ formulario.as_table }}
+
+</table>
+
+<input type="submit", value="Enviar">
+
+</form>
+
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <img class="d-block w-100 img-fluid img-slider" src="{% static 'AppCoder/images/slider1.jpg' %}" alt="First slide">
+	<div class="carousel-caption">         
+		<h2>Bienvenidos!</h2>
+		<p>...</p>
+	</div>   
+
+{% endblock %}
+
+{% block cambios_en_pagina %}
+
+{% if mensaje %}
+<h2>{{ mensaje }}</h2>
+
+{% else %}
+
+<h1>Resultados de la busqueda</h1>
+
+{% for local in locales %}
+
+<h2>{{ local.nombre }}</h2>
+<h2>{{ local.telefono }}</h2>
+
+{% endfor %}
+
+{% endif %}
+
+{% endblock %}

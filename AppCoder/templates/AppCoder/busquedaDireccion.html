@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <img class="d-block w-100 img-fluid img-slider" src="{% static 'AppCoder/images/slider1.jpg' %}" alt="First slide">
+	<div class="carousel-caption">         
+		<h2>Bienvenidos!</h2>
+		<p>...</p>
+	</div>   
+
+{% endblock %}
+
+{% block cambios_en_pagina %}
+
+<h1>Busqueda por direccion local</h1>
+
+<form action="{% url 'buscarDireccion' %}" method="GET"> {% csrf_token %}
+
+<p>direccion:<input type="text" name="direccion", id="direccion"></p>
+
+<input type="submit", value="Buscar">
+
+</form> 
+
+<h2>{{ mensaje }}</h2>
+
+{% endblock %}

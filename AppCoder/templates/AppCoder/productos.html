@@ -1,0 +1,25 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo_de_pagina %}
+    <!--Aquí va lo que cambia, y lo asociado a esta vista :) -->
+    <img class="d-block w-100 img-fluid img-slider" src="{% static 'AppCoder/images/menu-vegetarian.jpg' %}" alt="First slide">
+	<div class="carousel-caption"> 
+		<h2>Productos</h2>
+		<p>...</p>
+	</div>   
+
+{% endblock %}
+
+{% block cambios_en_pagina %}
+
+
+            
+
+<a class="nav-link" href="{% url 'productoFormulario' %}">Agregar Productos</a>
+										    
+
+
+
+{% endblock %}
