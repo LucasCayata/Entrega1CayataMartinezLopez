@@ -50,7 +50,7 @@ def localesFormulario(request):
             email= informacion.get("email")
             local = Locales(nombre=nombre, direccion=direccion, telefono=telefono, email=email) 
             local.save()
-            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro producto creado"})
+            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro local creado"})
         else: 
             return render(request, "AppCoder/inicio.html", {"mensaje": "Error"})
     else:
@@ -68,7 +68,7 @@ def chefsFormulario(request):
             especialidad= informacion.get("especialidad")
             chef = Chefs(nombre=nombre, apellido=apellido, especialidad=especialidad) 
             chef.save()
-            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro producto creado"})
+            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro chef creado"})
         else: 
             return render(request, "AppCoder/inicio.html", {"mensaje": "Error"})
     else:
@@ -87,7 +87,7 @@ def reservasFormulario(request):
             reservado= informacion.get("reservado")
             reserva = Reservas(nombre=nombre, mesa=mesa, comensales=comensales, reservado=reservado) 
             reserva.save()
-            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro producto creado"})
+            return render(request, "AppCoder/inicio.html", {"mensaje": "Registro reservas creado"})
         else: 
             return render(request, "AppCoder/inicio.html", {"mensaje": "Error"})
     else:
